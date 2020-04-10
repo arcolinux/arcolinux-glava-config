@@ -48,7 +48,7 @@
 #request settitle "GLava"
 
 /* Window geometry (x, y, width, height) */
-#request setgeometry 0 0 800 600
+#request setgeometry 0 0 500 1000
 
 /* Window background color (RGB format).
    Does not work with `setopacity "xroot"` */
@@ -68,7 +68,7 @@
    will do nothing, but you can use "!+" and "!-" to stack on top
    or below other windows.
 */
-#request setxwintype "normal"
+#request setxwintype "desktop"
 
 /* (X11 only) EWMH Window state atoms (multiple can be specified).
    Possible values are:
@@ -86,11 +86,11 @@
    and your WM is not correctly responding to the "desktop" value
    for `setxwintype`.
 */
-// #request addxwinstate "sticky"
-// #request addxwinstate "skip_taskbar"
-// #request addxwinstate "skip_pager"
-// #request addxwinstate "above"
-// #request addxwinstate "pinned"
+ #request addxwinstate "sticky"
+ #request addxwinstate "skip_taskbar"
+ #request addxwinstate "skip_pager"
+ #request addxwinstate "below"
+ #request addxwinstate "pinned"
 
 /* (X11 only) Use the XShape extension to support clicking through
    the GLava window. Useful when you want to interact with other
